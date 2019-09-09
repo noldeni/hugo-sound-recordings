@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-cupper"]
+	path = themes/hugo-theme-cupper
+	url = https://github.com/noldeni/hugo-theme-cupper
