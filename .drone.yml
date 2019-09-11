@@ -1,0 +1,57 @@
+---
+kind: pipeline
+type: docker
+name: landingpage
+
+steps:
+- name: build
+  image: klakegg/hugo:0.58.1-ext-alpine
+  commands:
+    - hugo
+  when:
+    branch:
+    - master
+    event:
+    - push
+    - pull_request
+
+- name: deploy
+  image: appleboy/drone-scp
+  settings:
+    host:
+      from_secret: deploy_host
+    username:
+      from_secret: deploy_user
+    password:
+      from_secret: deploy_pass
+    port:
+      from_secret: deploy_port
+    target: /hp/ab/ag/lm/www/nolden/www/hugo-sound-recordings
+    source: public/*
+    strip_components: 1
+    rm: true
+  when:
+    branch:
+    - master
+    event:
+    - push
+    - pull_request
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: slack_webhook
+    channel:
+      from_secret: slack_channel
+    template: >
+      {{#success build.status}}
+        {{repo.name}} build {{build.number}} succeeded. Good job.
+      {{else}}
+        {{repo.name}} build {{build.number}} failed. Fix me please.
+      {{/success}}
+  when:
+    status:
+    - success
+    - failure
+  
