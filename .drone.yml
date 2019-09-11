@@ -20,7 +20,7 @@ steps:
 - name: build
   image: anoff/hugo-asciidoctor
   commands:
-  - hugo --gc --minify -d _site #--baseURL https://blog.anoff.io
+  - hugo --gc --minify -d _site --baseURL https://www.ingo-nolden.de/sounds
   - touch _site/.nojekyll
   - ls -al
   when:
@@ -53,7 +53,8 @@ steps:
       from_secret: deploy_pass
     port:
       from_secret: deploy_port
-    target: /hp/ab/ag/lm/www/nolden/www/hugo-sound-recordings
+#    target: /hp/ab/ag/lm/www/nolden/www/hugo-sound-recordings
+    target: /www/ingo-nolden/web/sounds
     source: _site/*
     strip_components: 1
     rm: true
