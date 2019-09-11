@@ -54,7 +54,7 @@ steps:
     port:
       from_secret: deploy_port
 #    target: /hp/ab/ag/lm/www/nolden/www/hugo-sound-recordings
-    target: /www/ingo-nolden/web/sounds
+    target: /hp/ab/ag/lm/www/ingo-nolden/web/sounds
     source: _site/*
     strip_components: 1
     rm: true
