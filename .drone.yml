@@ -1,13 +1,14 @@
 ---
 kind: pipeline
 type: docker
-name: landingpage
+name: sound-recordings
 
 steps:
 - name: build
   image: klakegg/hugo:0.58.1-ext-alpine
   commands:
     - hugo
+    - ls -al
   when:
     branch:
     - master
