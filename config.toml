@@ -18,9 +18,9 @@ enableGitInfo = false
   quality = 99
 
 [params]
-  description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
-  homeMetaContent = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
-  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  description = "A site to document my sound recordings."
+  homeMetaContent = "A site to document my sound recordings."
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme)."
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "02.Jan.2006"
   codePenUser = ""
