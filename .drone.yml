@@ -22,6 +22,7 @@ steps:
   commands:
   - hugo --gc --minify -d _site #--baseURL https://blog.anoff.io
   - touch _site/.nojekyll
+  - ls -al
   when:
     branch:
     - master
@@ -53,7 +54,7 @@ steps:
     port:
       from_secret: deploy_port
     target: /hp/ab/ag/lm/www/nolden/www/hugo-sound-recordings
-    source: public/*
+    source: _site/*
     strip_components: 1
     rm: true
   when:
