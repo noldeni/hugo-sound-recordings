@@ -18,16 +18,28 @@ steps:
 #    validate: true
 
 - name: build
-  image: klakegg/hugo:0.58.1-ext-alpine
+  image: anoff/hugo-asciidoctor
   commands:
-  - hugo -D -d _site
-  - ls -al
+  - hugo --gc --minify -d _site #--baseURL https://blog.anoff.io
+  - touch _site/.nojekyll
   when:
     branch:
     - master
     event:
     - push
     - pull_request
+
+#- name: build
+#  image: klakegg/hugo:0.58.1-ext-alpine
+#  commands:
+#  - hugo -D -d _site
+#  - ls -al
+#  when:
+#    branch:
+#    - master
+#    event:
+#    - push
+#    - pull_request
 
 - name: deploy
   image: appleboy/drone-scp
