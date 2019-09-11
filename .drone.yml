@@ -4,11 +4,16 @@ type: docker
 name: sound-recordings
 
 steps:
+- name: submodules
+  image: docker:git
+  commands:
+  - git submodule update --init --recursive --remote
+
 - name: build
   image: klakegg/hugo:0.58.1-ext-alpine
   commands:
-    - hugo
-    - ls -al
+  - hugo
+  - ls -al
   when:
     branch:
     - master
