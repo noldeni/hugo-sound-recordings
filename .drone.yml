@@ -9,10 +9,18 @@ steps:
   commands:
   - git submodule update --init --recursive --remote
 
+#- name: build
+#  image: plugins/hugo
+#  settings:
+#    hugo_version: 0.52
+#    pull: always
+#    url: https://cbrgmtest.net
+#    validate: true
+
 - name: build
   image: klakegg/hugo:0.58.1-ext-alpine
   commands:
-  - hugo -D
+  - hugo -D -d _site
   - ls -al
   when:
     branch:
