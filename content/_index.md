@@ -3,7 +3,8 @@ date: "2019-09-11T18:27:58+01:00"
 title: "Home"
 ---
 
-Welcome to **Sound Samples**: An collection of my recorded sound samples. Currently I use a Tascam(c) DR-05 recorder for my recordings.
+Welcome to **Sound Samples**: An collection of my recorded sound samples. 
+Currently I use a [Tascam(c) DR-05](https://www.tascam.eu/de/dr-05x.html) recorder for my recordings.
 
 Preferably I record nature sounds like
 {{% ticks %}}
