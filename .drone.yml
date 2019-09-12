@@ -20,7 +20,7 @@ steps:
 - name: build
   image: anoff/hugo-asciidoctor
   commands:
-  - hugo --gc --minify -d _site --baseURL https://www.ingo-nolden.de/sounds
+  - hugo -D --gc --minify -d _site --baseURL https://www.ingo-nolden.de/sounds
   - touch _site/.nojekyll
   - ls -al
   when:
