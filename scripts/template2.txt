@@ -1,0 +1,24 @@
+General;---\r\ntitle: "%CompleteName%"\r\ndate: %Encoded_Date%\r\ndraft: true\r\ncategories: \["Cat1"\]\r\ntags: \["Tag1"\]\r\n---\r\n\r\n## Info\r\n\r\nOrt\r\n: Ort\r\n\r\nLocation\r\n: Location\r\n\r\nBeschreibung\r\n: Beschreibung\r\n\r\nKoordinaten\r\n: N51° 03.075' E06° 57.095'\r\n\r\nGoogle\r\n: <https://goo.gl/maps/HGruyax1fWDzHNDT6>\r\n\r\n### General\r\n\r\nComplete name\r\n: %CompleteName%\r\n\r\nEncoded date\r\n: %Encoded_Date%\r\n\r\nFile size\r\n: %FileSize/String4%\r\n\r\nDuration\r\n: %Duration/String1%\r\n\r\nFormat\r\n: %Format%\r\n\r\nOverall bit rate mode\r\n: %OverallBitRate_Mode/String%\r\n\r\nOverall bit rate\r\n: %OverallBitRate/String%\r\n\r\nProducer\r\n: %Producer%\r\n
+Video;Video #%StreamKindID%          : %Format%$if(%BitRate%, at %BitRate/String%)\r\nAspect            : %Width% x %Height% (%AspectRatio%)$if(%FrameRate%, at %FrameRate% fps)\r\n\r\n
+Audio;Format\r\n: %Format%\r\n\r\nFormat settings\r\n: %Format_Settings%\r\n\r\nCodec ID\r\n: %CodecID%\r\n\r\nDuration\r\n: %Duration/String1%\r\n\r\nBit rate mode\r\n: %BitRate_Mode/String%\r\n\r\nBit rate\r\n: %BitRate/String%\r\n\r\nChannel(s)\r\n: %Channel(s)/String%\r\n\r\nSampling rate\r\n: %SamplingRate/String%\r\n\r\nBit depth\r\n: %BitDepth/String%\r\n\r\nStream size\r\n: %StreamSize/String%\r\n
+Text;Text #%StreamKindID%           : %Format%\r\n$if(%Language%,Language          : %Language%\r\n)\r\n
+Chapters;Chapters #%StreamKindID%       : %Total% chapters\r\n\r\n
+File_Begin;
+File_End;
+Page_Begin;
+Page_Middle;
+Page_End;
+General_Begin;
+General_End;\r\n
+Video_Begin;
+Video_Middle;
+Video_End;
+Audio_Begin;### Audio\r\n\r\n
+Audio_Middle
+Audio_End;\r\n
+Text_Begin
+Text_Middle
+Text_End
+Chapters_Begin
+Chapters_Middle
+Chapters_End
